@@ -1,0 +1,19 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Uploaded media
+admin-SECRET/Penyimpanan gambar video/*
+!admin-SECRET/Penyimpanan gambar video/.gitkeep
+
+# Environment configuration
+.env
+*.config
+
+# PHP files
+error_log
+php_error.log

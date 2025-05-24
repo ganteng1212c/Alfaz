@@ -1,9 +1,27 @@
 <?php
+// Tambah session check untuk keamanan
+session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    echo json_encode(['status' => 'error', 'message' => 'Unauthorized access']);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if a file was uploaded
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $uploadDir = __DIR__ . '/Penyimpanan gambar video/';
-        $fileName = basename($_FILES['file']['name']);
+        
+        // Batasi ukuran file (20MB)
+        $maxFileSize = 20 * 1024 * 1024; // 20MB dalam bytes
+        if ($_FILES['file']['size'] > $maxFileSize) {
+            echo json_encode(['status' => 'error', 'message' => 'Ukuran file terlalu besar (max 20MB)']);
+            exit;
+        }
+        
+        // Buat nama file yang aman
+        $originalName = basename($_FILES['file']['name']);
+        $extension = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
+        $fileName = date('Ymd_His') . '_' . uniqid() . '.' . $extension;
         $targetFilePath = $uploadDir . $fileName;
 
         // Validate file type (image or video)
