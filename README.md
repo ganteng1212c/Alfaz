@@ -1,5 +1,31 @@
 # Alfaz Team Website
 
+A modern gallery and booking website with admin panel. Built with:
+- HTML5, CSS3, and JavaScript
+- Cloudinary for media storage and CDN
+- GitHub Pages for hosting
+
+## Features
+- Responsive photo and video gallery
+- Booking system
+- Admin dashboard
+- Secure media management
+- CDN-powered media delivery
+
+## Tech Stack
+- Frontend: HTML, CSS, JavaScript
+- Media Storage: Cloudinary
+- Hosting: GitHub Pages
+
+## Development
+To run this project locally:
+1. Clone the repository
+2. Set up Cloudinary credentials in `JS/cloudinary-config.js`
+3. Open `index.html` in your browser
+
+## Live Demo
+Visit: https://ganteng1212c.github.io/Alfaz/ Team Website
+
 A modern, responsive website for Alfaz Team featuring galleries, booking system, and media management.
 
 ## Features
