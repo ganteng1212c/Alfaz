@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Schedule</title>
+    <link rel="icon" href="../Source/logo.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/booking.css">
+</head>
+<body>
+    <header>
+        <button class="request-booking" id="requestBookingButton">
+            <span>Request Booking</span>
+        </button>
+    </header>
+
+    <div class="container">
+        <h1>Booking Schedule</h1>
+        <div class="schedule">
+            <div class="day">
+                <h3>Monday</h3>
+                <p class="time">08:00 AM - 05:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Tuesday</h3>
+                <p class="time">08:00 AM - 05:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Wednesday</h3>
+                <p class="time">08:00 AM - 05:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Thursday</h3>
+                <p class="time">08:00 AM - 05:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Friday</h3>
+                <p class="time">08:00 AM - 05:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Saturday</h3>
+                <p class="time">10:00 AM - 03:00 PM</p>
+            </div>
+            <div class="day">
+                <h3>Sunday</h3>
+                <p class="time">Closed</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="bookingModal">
+        <h2>Request Booking</h2>
+        <form id="requestForm">
+            <input type="email" id="email" placeholder="Enter your Gmail" required>
+            <input type="text" id="whatsapp" placeholder="Enter your WhatsApp number" required>
+            <select id="day" required>
+                <option value="" disabled selected>Select a day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <select id="class" required>
+                <option value="" disabled selected>Select a class</option>
+                <option value="Muaythai">Muaythai - 60k</option>
+                <option value="Boxing">Boxing - 60k</option>
+                <option value="MMA">MMA - 60k</option>
+                <option value="All Class">All Class - 160k</option>
+            </select>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="../JS/booking.js"></script>
+</body>
+</html>

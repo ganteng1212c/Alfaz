@@ -1,0 +1,317 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* Background putih */
+    color: #333; /* Teks abu-abu gelap */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.request-booking {
+    background-color: orange; /* Warna oranye */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: bounce 1.5s infinite;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); /* Ujung terpotong */
+}
+
+.request-booking span {
+    display: inline-block;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background: #f9f9f9; /* Background abu-abu terang */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day {
+    border: 1px solid #000; /* Warna garis hitam */
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff; /* Background putih */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.day:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0; /* Warna abu-abu terang saat hover */
+}
+
+.notification-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Background transparan hitam */
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.notification-page.active {
+    display: flex;
+}
+
+.notification-page h2 {
+    margin-bottom: 20px;
+}
+
+.notification-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notification-page li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.notification-page button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* Background hitam */
+    color: #fff; /* Teks putih */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.request-booking {
+    background-color: orange; /* Warna oranye */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: bounce 1.5s infinite;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); /* Ujung terpotong */
+}
+
+.request-booking span {
+    display: inline-block;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background: #1a1a1a; /* Warna abu-abu gelap untuk kontras */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day {
+    border: 1px solid #444; /* Warna garis abu-abu gelap */
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #222; /* Warna abu-abu gelap */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.day:hover {
+    transform: scale(1.05);
+    background-color: #333; /* Warna abu-abu lebih terang saat hover */
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a; /* Warna abu-abu gelap */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal input, .modal select, .modal button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #444; /* Warna garis abu-abu gelap */
+    border-radius: 5px;
+    background: #222; /* Warna abu-abu gelap */
+    color: white;
+}
+
+.modal button {
+    background-color: orange; /* Warna oranye */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-top: 80px;
+        padding: 15px;
+    }
+
+    .request-booking {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal input, .modal select, .modal button {
+        margin: 8px 0;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .day {
+        padding: 8px;
+    }
+
+    .notification-page li {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .request-booking {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .modal input, .modal select, .modal button {
+        font-size: 14px;
+    }
+}

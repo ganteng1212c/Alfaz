@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery</title>
+    <link rel="stylesheet" href="../CSS/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <h1 class="title">Media Gallery</h1>
+        </div>
+    </header>
+    <div class="gallery-container">
+        <div class="media-grid">
+            <!-- Foto Thumbnail -->
+            <div class="media-item" onclick="openPreview('photo', 'https://images.unsplash.com/photo-1700529043649-a04da2914062?q=80&w=2071&auto=format&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1700529043649-a04da2914062?q=80&w=2071&auto=format&fit=crop" alt="Photo 1">
+                <p>Photo 1</p>
+            </div>
+            <div class="media-item" onclick="openPreview('photo', 'https://images.unsplash.com/photo-1641893588018-b958a5845cab?q=80&w=2070&auto=format&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1641893588018-b958a5845cab?q=80&w=2070&auto=format&fit=crop" alt="Photo 2">
+                <p>Photo 2</p>
+            </div>
+            <!-- Video Thumbnail -->
+            <div class="media-item" onclick="openPreview('video', 'https://www.w3schools.com/html/mov_bbb.mp4')">
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+                <p>Video 1</p>
+            </div>
+            <div class="media-item" onclick="openPreview('video', 'https://www.w3schools.com/html/movie.mp4')">
+                <video src="https://www.w3schools.com/html/movie.mp4" muted></video>
+                <p>Video 2</p>
+            </div>
+        </div>
+    </div>
+        </form>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-content">
+            <span class="close-btn" onclick="closePreview()">&times;</span>
+            <div id="previewMedia"></div>
+            <a id="downloadBtn" class="download-btn" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=108635&format=png&color=000000" alt="Download Icon">
+            </a>
+        </div>
+    </div>
+
+    <script src="../JS/media.js"></script>
+</body>
+</html>
